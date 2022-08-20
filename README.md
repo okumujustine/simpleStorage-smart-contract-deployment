@@ -10,10 +10,10 @@ Deploys a smart contract that stores a list of people with their names and favor
 ##### 3. Navigate to the project directory
 `$ cd simpleStorage-smart-contract-deployment`
 
-##### 4. Create python virtual environment and activate it
-`$ python3 venv env && source venv/bin/activate`
+##### 4. Create a python virtual environment and activate it
+`$ python3 venv venv && source venv/bin/activate`
 
-##### 5. Install requirements
+##### 5. Install requirements/packages
 `$ pip install requirements.txt`
 
 ##### 6. Set network/blockchain node configurations in the (config.py)
