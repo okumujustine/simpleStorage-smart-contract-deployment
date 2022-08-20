@@ -1,0 +1,1 @@
+Deploys a smart contract that stores a list of people with their names and favorite number on the ethereum blockchain
