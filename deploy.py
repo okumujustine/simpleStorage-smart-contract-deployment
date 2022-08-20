@@ -1,6 +1,12 @@
 from solcx import compile_standard, install_solc
 import json
 from web3 import Web3
+from config import (
+    provider_url,
+    chain_id,
+    my_address,
+    private_key,
+)
 
 install_solc("0.6.0")
 
@@ -33,10 +39,11 @@ bytecode = compiled_sol["contracts"]["simpleStorage.sol"]["SimpleStorage"]["evm"
 # get abi
 abi = compiled_sol["contracts"]["simpleStorage.sol"]["SimpleStorage"]["abi"]
 
-w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:7545"))
-chain_id = 1337
-my_address = "0xa284098F7d0AfDc48663705BBf3d1D57D2B5966E"
-private_key = "0xc267b00848ca74c7ef8b675a3384214539d29d0576c01af57efac57cafa750b7"
+# network configuration section
+w3 = Web3(Web3.HTTPProvider(provider_url))
+chain_id = chain_id
+my_address = my_address
+private_key = private_key
 
 # create the contract in python
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
